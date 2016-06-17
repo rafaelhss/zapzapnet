@@ -1,4 +1,4 @@
-package zap;
+package zap.bussiness;
 
 import java.util.Date;
 

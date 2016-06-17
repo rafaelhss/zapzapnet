@@ -1,29 +1,24 @@
-package zap;
+package zap.bussiness;
 
 
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections.list.SetUniqueList;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.nio.file.Files;
-import java.nio.file.OpenOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.*;
-import java.util.stream.StreamSupport;
-public class NetGenerator {
+
+public class PajekNetGenerator {
 
     List<String> vertices = SetUniqueList.decorate(new ArrayList<String>());
     List<Date> datas = SetUniqueList.decorate(new ArrayList<Date>());
     ArrayList<Conn> edges = new ArrayList<>();
 
 
-    public void generate(List<Connection> connections){
+    public StringBuilder generate(List<Connection> connections){
 
 
         //IF LONGITONNAL ...
@@ -67,6 +62,8 @@ public class NetGenerator {
         }catch (Exception e) {
             e.printStackTrace();
         }
+
+        return net;
     }
 
     private void geraEdges(StringBuilder net) {
