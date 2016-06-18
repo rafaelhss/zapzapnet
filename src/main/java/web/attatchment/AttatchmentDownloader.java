@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import util.ConfigProvider;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
@@ -22,6 +23,12 @@ public class AttatchmentDownloader {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(Attachment.class, new AttachmentDeserializer())
                 .create();
+
+        //create output directory is not exists
+        File folder = new File(destinationFolder);
+        if(!folder.exists()){
+            folder.mkdir();
+        }
 
         System.out.println("Attatchment");
         for (Attachment attachment : gson.fromJson(attachments, Attachment[].class)) {
@@ -47,7 +54,7 @@ public class AttatchmentDownloader {
                 website = new URL(url);
                 Authenticator.setDefault(new Authenticator() {
                         protected PasswordAuthentication getPasswordAuthentication() {
-                            return new PasswordAuthentication("api", "key-474ddb5b00478f3adec0e422ebf5050a".toCharArray());
+                            return new PasswordAuthentication("api", ConfigProvider.getKey().toCharArray());
                         }
                 });
                 ReadableByteChannel rbc = Channels.newChannel(website.openStream());

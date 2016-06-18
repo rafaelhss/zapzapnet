@@ -40,7 +40,7 @@ public class Controller {
 
             File zippedFile = new File(AttatchmentDownloader.downloadAll(attachments, attatchmentsFolder));
 
-            File unzippedFile = new File(new Unzipper().unZipIt(zippedFile.getAbsolutePath(), zippedFile.getAbsolutePath().replace(".zip", "").trim() + File.pathSeparator));
+            File unzippedFile = new File(new Unzipper().unZipIt(zippedFile.getAbsolutePath(), zippedFile.getAbsolutePath().replace(".zip", "").trim()));
 
             Network network = new ZapMail().processZipFile(unzippedFile);
             network.setGroupname(zippedFile.getName().replace(".zip","").trim());

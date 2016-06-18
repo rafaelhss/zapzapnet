@@ -51,7 +51,7 @@ public class EmailDispatcher {
         formData.add("subject", "Your network is ready!");
         //formData.add("text", "H2i! Your network was generated and is ready to be visualized ");
 
-        formData.add("html", "<html>Hi! Your network was generated and is ready to be visualized <strong><a href=\"https://whatsappnet.herokuapp.com/showNetwork.html#/ShowNetwork/"+networkId+"\">here</a></strong></html>");
+        formData.add("html", "<html>Hi! Your network was generated and is ready to be visualized <strong><a href=\""+ConfigProvider.getRootPath()+"/showNetwork.html#/ShowNetwork/"+networkId+"\">here</a></strong></html>");
 
         fireMailGun(formData);
 

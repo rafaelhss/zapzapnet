@@ -14,4 +14,10 @@ public class ConfigProvider {
 
     public static String getEdgesSeparator() {return "#########";}
     public static String getNodesSeparator() {return "---------";}
+
+    public static String getRootPath(){
+        //return "https://whatsappnet.herokuapp.com";
+        return "https://6270e912.ngrok.io";
+    }
+
 }

@@ -1,5 +1,7 @@
 package zap.bussiness;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,6 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.EmptyStackException;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,6 +35,9 @@ public class ConnectionFactory {
     public List<Connection> getConnections(File arq) throws ParseException {
         List<Connection> connections = new ArrayList<>() ;
         List<Message> msgs = extractMsgs(arq);
+        if(msgs.size() <= 0){
+            throw new ParseException("Não foram encontradas mensagens", 0);
+        }
         double avgTimeBetweenMsgs = getAvgTimeBetweenMsgs(msgs);
         System.out.println("avgTimeBetweenMsgs:" + avgTimeBetweenMsgs);
 
@@ -85,7 +91,7 @@ public class ConnectionFactory {
     }
     private ArrayList<Message> extractMsgs(File arq) throws ParseException {
         List<String> lines = readStringListFromFile(arq);
-        Pattern pattern = Pattern.compile("^[0-9]{1,2}/[0-9]{1,2}/[0-9]{1,2},\\s[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}:");
+        Pattern pattern = Pattern.compile("^[0-9]{1,2}/[0-9]{1,2}/[0-9]{1,2},\\s[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}[\\s]{0,1}[A-Za-z0-9]{0,2}:");
 
         ArrayList<Message> msgs = new ArrayList<Message>();
 
@@ -101,8 +107,10 @@ public class ConnectionFactory {
                     sender = aux.substring(0,aux.indexOf(":"));
                     text = aux.substring(aux.indexOf(":")+1);
 
-                    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yy, HH:mm:ss:");
-                    Date date = sdf.parse(matcher.group());
+                    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yy, HH:mm:ss");
+                    String dataLimpa = matcher.group().substring(0,StringUtils.ordinalIndexOf(matcher.group(), ":",3));
+                    System.out.println("dataLimpa:" + dataLimpa);
+                    Date date = sdf.parse(dataLimpa);
 
                     Message msg = new Message();
                     msg.setDate(date);
