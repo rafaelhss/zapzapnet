@@ -1,10 +1,10 @@
 package zap;
 
-import zap.bussiness.Connection;
-import zap.bussiness.ConnectionFactory;
-import zap.bussiness.PajekNetGenerator;
-import zap.bussiness.Unzipper;
+import mail.EmailDispatcher;
+import web.network.Network;
+import zap.bussiness.*;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -12,16 +12,24 @@ import java.util.List;
  */
 public class ZapMail {
 
-    public void processFolder(String folder){
+    public Network processZipFile(File file){
         try{
-            String UnzippedFilesPath = new Unzipper().unzipFilesInFolder(folder);
-            List<Connection> connections = new ConnectionFactory().getConnections(UnzippedFilesPath);
-            StringBuilder net = new PajekNetGenerator().generate(connections);
 
+            List<Connection> connections = new ConnectionFactory().getConnections(file);
 
+            connections = new Obfuscator().obfuscateLabels(connections, Obfuscator.ObfuscationType.LEAVE_NAME_OR_4_DIGITS);
+
+            //EmailDispatcher.SendSimpleMessage("rafaelhss@gmail.com", "234567");
+
+            Network result = new Network();
+            result.setSigmagraph(new SigmaJsonGenerator().generate(connections).toString());
+            result.setGroupname(file.getName().replace(".zip","").trim());
+
+            return result;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
 }

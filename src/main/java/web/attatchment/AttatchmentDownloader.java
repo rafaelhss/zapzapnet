@@ -1,5 +1,9 @@
 package web.attatchment;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import util.ConfigProvider;
+
 import java.io.FileOutputStream;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
@@ -11,7 +15,30 @@ import java.nio.channels.ReadableByteChannel;
  * Created by rafa on 17/06/2016.
  */
 public class AttatchmentDownloader {
-    public static boolean Download(String url, String fileDestination)
+
+    public static String downloadAll(String attachments, String destinationFolder){
+        String lastNameDownloaded = "Error";
+
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Attachment.class, new AttachmentDeserializer())
+                .create();
+
+        System.out.println("Attatchment");
+        for (Attachment attachment : gson.fromJson(attachments, Attachment[].class)) {
+            System.out.println(attachment.getUrl());
+            System.out.println(attachment.getName());
+            String httpPrefix = "https://";
+            String key = "api:"+ ConfigProvider.getKey();
+            String url = attachment.getUrl().replace(httpPrefix, httpPrefix + key + "@");
+            String finalFilePath = destinationFolder + attachment.getName();
+            AttatchmentDownloader.Download(url, finalFilePath);
+            lastNameDownloaded = finalFilePath;
+            System.out.println("finalFilePath: " + finalFilePath);
+        }
+        return lastNameDownloaded;
+    }
+
+    private static boolean Download(String url, String fileDestination)
     {
         URL website;
         for (int i = 0; i < 3; i++) {

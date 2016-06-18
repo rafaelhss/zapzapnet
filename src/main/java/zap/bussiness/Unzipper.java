@@ -8,6 +8,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 public class Unzipper {
+
+
+
     public String unzipFilesInFolder(String zippedFiles) {
         String UNZIPPEDFILES = zippedFiles + "\\unzip";
 
@@ -23,7 +26,10 @@ public class Unzipper {
      * @param zipFile input zip file
      * @param outputFolder zip file output folder
      */
-    private void unZipIt(String zipFile, String outputFolder){
+    public String unZipIt(String zipFile, String outputFolder){
+
+        System.out.println("outputFolder:" + outputFolder);
+        String lastFileName = "error";
 
         byte[] buffer = new byte[1024];
 
@@ -48,6 +54,8 @@ public class Unzipper {
 
                 System.out.println("file unzip : "+ newFile.getAbsoluteFile());
 
+                lastFileName = newFile.getAbsoluteFile().toString();
+
                 //create all non exists folders
                 //else you will hit FileNotFoundException for compressed folder
                 new File(newFile.getParent()).mkdirs();
@@ -68,8 +76,12 @@ public class Unzipper {
 
             System.out.println("Done");
 
+            return lastFileName;
         }catch(IOException ex){
             ex.printStackTrace();
+            return ex.getMessage();
         }
+
+
     }
 }

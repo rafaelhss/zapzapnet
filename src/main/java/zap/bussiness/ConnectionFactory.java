@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Path;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,29 +18,34 @@ import java.util.regex.Pattern;
  */
 public class ConnectionFactory {
 
-    public List<Connection> getConnections(String UNZIPPEDFILES) throws ParseException {
-        int fileCount = new File(UNZIPPEDFILES).listFiles().length;
+    public List<Connection> getConnections(Path UNZIPPEDFILES) throws ParseException {
+        int fileCount = UNZIPPEDFILES.toFile().listFiles().length;
 
         int fileIndex = 0;
         List<Connection> connections = new ArrayList<>();
-        for (File arq : new File(UNZIPPEDFILES).listFiles()) {
-            System.out.println(fileIndex++ + " de " + fileCount + " extraiNomesAfiliados: " + arq.getName());
-            List<Message> msgs = extractMsgs(arq);
-            double avgTimeBetweenMsgs = getAvgTimeBetweenMsgs(msgs);
-            System.out.println("avgTimeBetweenMsgs:" + avgTimeBetweenMsgs);
+        for (File arq : UNZIPPEDFILES.toFile().listFiles()) {
+            connections.addAll(getConnections(arq));
+        }
+        return connections;
+    }
 
-            System.out.println("size:" + msgs.size());
-            for (int i=0; i < msgs.size()-1; i++){
+    public List<Connection> getConnections(File arq) throws ParseException {
+        List<Connection> connections = new ArrayList<>() ;
+        List<Message> msgs = extractMsgs(arq);
+        double avgTimeBetweenMsgs = getAvgTimeBetweenMsgs(msgs);
+        System.out.println("avgTimeBetweenMsgs:" + avgTimeBetweenMsgs);
 
-                Message current = msgs.get(i);
-                Message next = msgs.get(i + 1);
+        System.out.println("size:" + msgs.size());
+        for (int i=0; i < msgs.size()-1; i++){
 
-                long diff = (next.getDate().getTime()/1000) -(current.getDate().getTime()/1000);
+            Message current = msgs.get(i);
+            Message next = msgs.get(i + 1);
+
+            long diff = (next.getDate().getTime()/1000) -(current.getDate().getTime()/1000);
 
 
-                if((!next.getSender().equals(current.getSender())) && ((diff) < (avgTimeBetweenMsgs))) {
-                    connections.add(connectionFactory(current, next));
-                }
+            if((!next.getSender().equals(current.getSender())) && ((diff) < (avgTimeBetweenMsgs))) {
+                connections.add(connectionFactory(current, next));
             }
         }
         return connections;
@@ -100,8 +106,8 @@ public class ConnectionFactory {
 
                     Message msg = new Message();
                     msg.setDate(date);
-                    msg.setSender(sender);
-                    msg.setText(text);
+                    msg.setSender(sender.trim().replaceAll("[^A-Za-z0-9 ]", ""));
+                    msg.setText(text.trim());
 
                     msgs.add(msg);
 

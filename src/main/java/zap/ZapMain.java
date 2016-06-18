@@ -7,7 +7,7 @@ public class ZapMain {
 	public static void main(String[] args) {
         try {
 
-			new ZapMail().processFolder(ZIPPEDFILES);
+		//	new ZapMail().processFolder(ZIPPEDFILES);
 
 
 		} catch (Exception e) {
