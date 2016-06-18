@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar  target/zapzapnet-0.1.0.jar
