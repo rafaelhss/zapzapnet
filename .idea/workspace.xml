@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a86a229-82fd-4225-91cb-324eb858fd76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" afterPath="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/web/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/html/network.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/network.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/showNetwork.html" afterPath="$PROJECT_DIR$/src/main/resources/static/showNetwork.html" />
-    </list>
+    <list default="true" id="7a86a229-82fd-4225-91cb-324eb858fd76" name="Default" comment="" />
     <ignored path="zapzapnet.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/classes/" />
