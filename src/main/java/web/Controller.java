@@ -28,7 +28,7 @@ import zap.bussiness.Unzipper;
 @RestController
 public class Controller {
 
-    private static final String attatchmentsFolder = "C:\\Users\\rafa\\Documents\\Projects\\zapzapnet\\zapzapnet\\chats\\download\\";
+    private static final String attatchmentsFolder = "download\\";
 
     @Autowired
     private NetworkRepository networkRepository;
