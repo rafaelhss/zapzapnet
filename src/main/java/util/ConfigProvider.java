@@ -11,4 +11,7 @@ public class ConfigProvider {
     public static String getDomain(){
         return "sandbox43250dec73c44618984f3f7ee96f5b84.mailgun.org";
     }
+
+    public static String getEdgesSeparator() {return "#########";}
+    public static String getNodesSeparator() {return "---------";}
 }

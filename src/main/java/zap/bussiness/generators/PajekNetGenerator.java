@@ -1,9 +1,10 @@
-package zap.bussiness;
+package zap.bussiness.generators;
 
 
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections.list.SetUniqueList;
+import zap.bussiness.Connection;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

@@ -1,6 +1,8 @@
-package zap.bussiness;
+package zap.bussiness.generators;
 
 import org.apache.commons.collections.list.SetUniqueList;
+import zap.bussiness.Connection;
+import zap.bussiness.Generator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ import java.util.List;
  });
  *
  */
-public class SigmaJsonGenerator implements Generator{
+public class SigmaJsonGenerator implements Generator {
 
     String gNodesPushTemplate = "g.nodes.push({\n" +
                                     " id: '@@ID@@',\n" +

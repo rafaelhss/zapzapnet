@@ -22,7 +22,7 @@ public class Network {
     private String groupname;
     @Lob
     @Column( length = 1000000 )
-    private String sigmagraph;
+    private String edges;
 
     private class NetworkId {
 

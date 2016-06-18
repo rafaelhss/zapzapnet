@@ -1,8 +1,9 @@
 package zap;
 
-import mail.EmailDispatcher;
 import web.network.Network;
 import zap.bussiness.*;
+import zap.bussiness.generators.EdgesListGenerator;
+import zap.bussiness.generators.SigmaJsonGenerator;
 
 import java.io.File;
 import java.util.List;
@@ -22,8 +23,7 @@ public class ZapMail {
             //EmailDispatcher.SendSimpleMessage("rafaelhss@gmail.com", "234567");
 
             Network result = new Network();
-            result.setSigmagraph(new SigmaJsonGenerator().generate(connections).toString());
-            result.setGroupname(file.getName().replace(".zip","").trim());
+            result.setEdges(new EdgesListGenerator().generate(connections).toString());
 
             return result;
         } catch (Exception e) {
