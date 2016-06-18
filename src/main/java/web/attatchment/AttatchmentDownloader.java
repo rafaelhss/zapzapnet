@@ -30,7 +30,7 @@ public class AttatchmentDownloader {
             String httpPrefix = "https://";
             String key = "api:"+ ConfigProvider.getKey();
             String url = attachment.getUrl().replace(httpPrefix, httpPrefix + key + "@");
-            String finalFilePath = destinationFolder + attachment.getName();
+            String finalFilePath = destinationFolder + attachment.getName().trim();
             AttatchmentDownloader.Download(url, finalFilePath);
             lastNameDownloaded = finalFilePath;
             System.out.println("finalFilePath: " + finalFilePath);
