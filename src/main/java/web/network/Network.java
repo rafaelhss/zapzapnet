@@ -24,9 +24,10 @@ public class Network {
     @Column( length = 1000000 )
     private String edges;
 
-    private class NetworkId {
+    private String topSender;
+    private String topTarget;
+    private String mainEdges;
 
-    }
 
 }
 

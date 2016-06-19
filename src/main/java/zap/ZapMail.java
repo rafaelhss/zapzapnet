@@ -4,6 +4,7 @@ import web.network.Network;
 import zap.bussiness.*;
 import zap.bussiness.generators.EdgesListGenerator;
 import zap.bussiness.generators.SigmaJsonGenerator;
+import zap.bussiness.metrics.MetricsCalculator;
 
 import java.io.File;
 import java.util.List;
@@ -20,10 +21,10 @@ public class ZapMail {
 
             connections = new Obfuscator().obfuscateLabels(connections, Obfuscator.ObfuscationType.LEAVE_NAME_OR_4_DIGITS);
 
-            //EmailDispatcher.SendSimpleMessage("rafaelhss@gmail.com", "234567");
-
             Network result = new Network();
             result.setEdges(new EdgesListGenerator().generate(connections).toString());
+
+            new MetricsCalculator().calculateMetrics(result, connections);
 
             return result;
         } catch (Exception e) {
@@ -31,5 +32,4 @@ public class ZapMail {
         }
         return null;
     }
-
 }

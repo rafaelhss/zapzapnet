@@ -19,7 +19,6 @@ public class ConfigProvider {
 
     public static String getRootPath(){
         return "https://whatsappnet.herokuapp.com";
-        
     }
 
 

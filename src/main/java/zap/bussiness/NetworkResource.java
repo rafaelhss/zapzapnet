@@ -19,6 +19,10 @@ public class NetworkResource {
     private String owner;
     private String name;
     private String groupname;
+    private String topSender;
+    private String topTarget;
+    private String mainEdges;
+
     private List<String> nodes = new ArrayList<>();
     private List<Edge> edges =  new ArrayList<>();
 
@@ -29,7 +33,10 @@ public class NetworkResource {
             this.name = network.getName();
             this.groupname = network.getGroupname();
 
-                System.out.println(" network.getEdges().:" +  network.getEdges());
+            this.topSender = network.getTopSender();
+            this.topTarget = network.getTopTarget();
+            this.mainEdges = network.getMainEdges();
+            //    System.out.println(" network.getEdges().:" +  network.getEdges());
             List<String> nodestmp = SetUniqueList.decorate(new ArrayList<String>());
             String[] edgesdb = network.getEdges().split(ConfigProvider.getEdgesSeparator());
             for (String edgedb : edgesdb){
