@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a86a229-82fd-4225-91cb-324eb858fd76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/HashMapUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/network/Edge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/zap/NetworkFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/MessageFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/metrics/ConnectionMetrics.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/metrics/MessageMetrics.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/metrics/WordCloudElement.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chats/download/WhatsApp.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/zap/ZapMail.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/metrics/MetricsCalculator.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/web/network/Network.java" afterPath="$PROJECT_DIR$/src/main/java/web/persistence/Network.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/web/network/NetworkRepository.java" afterPath="$PROJECT_DIR$/src/main/java/web/persistence/NetworkRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/Connection.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/Connection.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/ConnectionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/ConnectionFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/Generator.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/generators/Generator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/Message.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/Message.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/NetworkResource.java" afterPath="$PROJECT_DIR$/src/main/java/web/network/NetworkResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/Obfuscator.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/Obfuscator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/Unzipper.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/Unzipper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/generators/EdgesListGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/generators/EdgesListGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/generators/PajekNetGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/generators/PajekNetGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/zap/bussiness/generators/SigmaJsonGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/web/zap/bussiness/generators/SigmaJsonGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chats/download/WhatsApp/_chat.txt" afterPath="$PROJECT_DIR$/chats/download/WhatsApp/_chat.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download/WhatsApp Chat - DISAR/_chat.txt" afterPath="$PROJECT_DIR$/download/WhatsApp Chat - DISAR/_chat.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" afterPath="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/web/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/bower.json" afterPath="$PROJECT_DIR$/src/main/resources/static/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/html/network.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/network.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/showNetwork.html" afterPath="$PROJECT_DIR$/src/main/resources/static/showNetwork.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test/MainTest.java" afterPath="$PROJECT_DIR$/src/test/test/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teste.txt" afterPath="$PROJECT_DIR$/teste.txt" />
     </list>
     <ignored path="zapzapnet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +29,18 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/web/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.111111">
-              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+            <state vertical-scroll-proportion="-8.62963">
+              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailDispatcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9239374">
+              <caret line="53" column="153" selection-start-line="53" selection-start-column="153" selection-end-line="53" selection-end-column="153" />
               <folding />
             </state>
           </provider>
@@ -105,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionMetrics.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConnectionMetrics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/web/zap/bussiness/metrics/ConnectionMetrics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6577181">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -150,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/web/network/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/zap/bussiness/generators/EdgesListGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/attatchment/AttatchmentDownloader.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/ConfigProvider.java" />
@@ -176,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/main/java/web/network/NetworkResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/network/Edge.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/zap/bussiness/metrics/ConnectionMetrics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" />
       </list>
     </option>
   </component>
@@ -439,7 +416,105 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="zap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zapzapnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zapzapnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zapzapnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zapzapnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zapzapnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zapzapnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="attatchment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1133,14 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5816555">
-          <caret line="53" column="177" selection-start-line="53" selection-start-column="166" selection-end-line="53" selection-end-column="177" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/web/zap/bussiness/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6465324">
@@ -1201,14 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.111111">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/web/zap/NetworkFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1251,8 +1310,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/web/zap/bussiness/metrics/ConnectionMetrics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6577181">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.62963">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9239374">
+          <caret line="53" column="153" selection-start-line="53" selection-start-column="153" selection-end-line="53" selection-end-column="153" />
           <folding />
         </state>
       </provider>
