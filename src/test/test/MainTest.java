@@ -1,9 +1,8 @@
 package test;
 
-import mail.EmailDispatcher;
-import web.network.Network;
-import zap.ZapMail;
-import zap.bussiness.Unzipper;
+import web.persistence.Network;
+import web.zap.NetworkFactory;
+import web.zap.bussiness.Unzipper;
 
 import java.io.File;
 
@@ -13,16 +12,17 @@ import java.io.File;
 public class MainTest {
     public static void main(String[] args){
 
-        File zippedFile = new File("C:\\Users\\rafa\\Documents\\Projects\\zapzapnet\\zapzapnet\\chats\\download\\WhatsApp.zip");
+        File zippedFile = new File("C:\\Users\\rafa\\Documents\\Projects\\zapzapnet\\zapzapnet\\chats\\download\\Tetsbyjnxksajcnsakjcnaskjcn asc sacnsaj sacsaci.zip");
 
         File unzippedFile = new File(new Unzipper().unZipIt(zippedFile.getAbsolutePath(), zippedFile.getAbsolutePath().replace(".zip", "").trim()));
 
-        Network network = new ZapMail().processZipFile(unzippedFile);
-        network.setGroupname(zippedFile.getName().replace(".zip","").trim());
+        Network network = new NetworkFactory().fromZipFile(unzippedFile, zippedFile.getName().replace(".zip","").trim());
 
-        System.out.println(network.getMainEdges());
-        System.out.println(network.getTopSender());
-        System.out.println(network.getTopTarget());
+
+        System.out.println(network.getConnectionMetrics().getMainEdges());
+        System.out.println(network.getConnectionMetrics().getTopSender());
+        System.out.println(network.getConnectionMetrics().getTopTarget());
+        System.out.println(network.getGroupname());
 
 
 

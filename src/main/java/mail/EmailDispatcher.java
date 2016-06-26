@@ -45,7 +45,7 @@ public class EmailDispatcher {
         //WebResource webResource =  client.resource(url);
 
         MultivaluedMapImpl formData = new MultivaluedMapImpl();
-        formData.add("from", "Whatsapp.text2.net <zap@"+ConfigProvider.getDomain()+">");
+        formData.add("from", "Whatsapp.text2.net <web.zap@"+ConfigProvider.getDomain()+">");
         formData.add("to", destination);
         //formData.add("to", "rafael.soares@bcb.gov.br");
         formData.add("subject", "Your network is ready!");
