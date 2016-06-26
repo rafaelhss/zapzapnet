@@ -20,8 +20,8 @@ zapzapnet.controller('ShowNetworkController', function($scope, $routeParams, Res
     console.log($routeParams.networkId)
     $scope.networkId = $routeParams.networkId;
 
-    //Restangular.one('network', $routeParams.networkId)
-      Restangular.oneUrl('network', 'http://localhost:8080/network/' + $routeParams.networkId)
+    Restangular.one('network', $routeParams.networkId)
+        //  Restangular.oneUrl('network', 'http://localhost:8080/network/' + $routeParams.networkId)
         .get().then(function(network){
             console.log('id:'+ network.sigmagraph);
 
