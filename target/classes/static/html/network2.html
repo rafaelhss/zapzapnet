@@ -1,0 +1,51 @@
+<article>
+    <header>
+        <h1>{{network.groupname}}</h1>
+        <jqcloud words="words" width="300" height="400" colors="{{colors}}" delay="10" steps="7" font-size="{from:0.09, to:0.04}"></jqcloud>
+
+    </header>
+    <section>
+        <h2>The network</h2>
+        <style>
+            .connections{
+                text-align: center;
+                vertical-align: middle;
+            }
+            #graph-container {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: relative;
+                width: 300px;
+                height: 400px;
+            }
+        </style>
+            <div id="graph-container"></div>
+    </section>
+    <section>
+        <h2>Connections</h2>
+        <div class="connections" ng-repeat="edge in network.connectionMetrics.mainEdges">
+            {{edge.source}}
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            {{edge.size}}
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            {{edge.target}}
+        </div>
+    </section>
+    <footer>
+        <h3>Top members</h3>
+        <p>
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            {{network.connectionMetrics.topSender}}
+        </p>
+        <p>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            {{network.connectionMetrics.topTarget}}
+        </p>
+    </footer>
+</article>

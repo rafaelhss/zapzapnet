@@ -35,6 +35,8 @@ public class MessageMetrics {
 
     private static final int MIN_LENGHT = 5 ;
 
+    private static final int MAX_LENGHT = 30 ;
+
 
     public MessageMetrics(){
 
@@ -46,6 +48,7 @@ public class MessageMetrics {
         Map<String, Long> wordCloudMap = msgs.stream()
                 .flatMap(msg -> Pattern.compile(" ").splitAsStream(msg.getText()))
                 .filter(msg -> msg.length() >= MIN_LENGHT)
+                .map(msg -> msg.substring(0,msg.length() >= MAX_LENGHT ? MAX_LENGHT:msg.length()))
                 .map(msg -> UNDESIRABLES.matcher(msg.trim().toLowerCase()).replaceAll(""))
                 .map(msg -> Normalizer
                         .normalize(msg, Normalizer.Form.NFD)

@@ -49,6 +49,27 @@ public class Controller {
         System.out.println(attachments);
     }
 
+    @RequestMapping("/teste/email")
+    public void processMail() {
+        System.out.println("processMail");
+        File zippedFile = new File("C:\\Users\\rafa\\Documents\\Projects\\zapzapnet\\zapzapnet\\chats\\download\\Tetsbyjnxksajcnsakjcnaskjcn asc sacnsaj sacsaci.zip");
+
+        File unzippedFile = new File(new Unzipper().unZipIt(zippedFile.getAbsolutePath(), zippedFile.getAbsolutePath().replace(".zip", "").trim()));
+
+        Network network = new NetworkFactory().fromZipFile(unzippedFile, zippedFile.getName().replace(".zip","").trim());
+
+
+        System.out.println(network.getConnectionMetrics().getMainEdges());
+        System.out.println(network.getConnectionMetrics().getTopSender());
+        System.out.println(network.getConnectionMetrics().getTopTarget());
+        System.out.println(network.getGroupname());
+
+            network = networkRepository.save(network);
+
+            EmailDispatcher.SendSimpleMessage("rafaelhss@gmail.com", String.valueOf(network.getId()));
+
+    }
+
     @RequestMapping("/network/{id}")
     public ResponseEntity<NetworkResource> getNetwork(@PathVariable(value = "id") Integer id) {
 

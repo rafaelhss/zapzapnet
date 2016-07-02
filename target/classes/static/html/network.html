@@ -1,0 +1,28 @@
+<h2>networkId #{{networkId}}</h2>
+<h3>Top Sender : {{network.topSender}}</h3>
+<h3>Top Target : {{network.topTarget}}</h3>
+<h3>Main connections : {{network.mainEdges}}</h3>
+<div id="container">
+    <style>
+        #graph-container {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        /*  #sidebar {
+              bottom: 0;
+              right: 0;
+              width: 200px;
+              height: 150px;
+              position: absolute;
+              background-color: #999;
+              padding: 10px;
+          }*/
+    </style>
+    <jqcloud words="words" width="500" height="350" colors="{{colors}}" delay="10" steps="7" font-size="{from:0.09, to:0.04}"></jqcloud>
+    <div id="graph-container"></div>
+    <!--<div id="sidebar">This area is not a drop target.</div>-->
+</div>
